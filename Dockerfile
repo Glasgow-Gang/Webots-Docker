@@ -11,4 +11,4 @@ RUN apt upgrade -y --no-install-recommends & apt install -y --no-install-recomme
 
 RUN wget https://github.com/cyberbotics/webots/releases/download/R2023b/webots_2023b_amd64.deb -O ./webots.deb && apt install ./webots.deb -y --no-install-recommends && rm webots.deb
 
-RUN cd /root && git clone https://github.com/Glasgow-Gang/Webots-Controller && git clone https://github.com/Glasgow-Gang/Webots-World
+RUN bash -c "cd && git clone https://github.com/Glasgow-Gang/Webots-Controller && git clone https://github.com/Glasgow-Gang/Webots-World"
