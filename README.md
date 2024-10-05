@@ -22,7 +22,7 @@ Reference: <https://github.com/xrobot-org/Docker-Image>
 
    ```shell
    xhost +
-   webots
+   nohup webots &
    ```
 
 5. Open Webots World:
