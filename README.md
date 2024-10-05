@@ -15,12 +15,13 @@ Reference: <https://github.com/xrobot-org/Docker-Image>
 3. Run image:
 
     ```shell
-    sudo docker run -it  -e "DISPLAY=$DISPLAY" -v "$HOME/.Xauthority:/root/.Xauthority:ro" --network host ghcr.io/glasgow-gang/webots-docker:main`
+    sudo docker run -it  -e "DISPLAY=$DISPLAY" -v "$HOME/.Xauthority:/root/.Xauthority:ro" --network host ghcr.io/glasgow-gang/webots-docker:main
     ```
 
 4. Start Webots:
 
    ```shell
+   xhost +
    webots
    ```
 
