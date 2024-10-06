@@ -21,7 +21,7 @@ Reference: <https://github.com/xrobot-org/Docker-Image>
 4. Start Webots:
 
    ```shell
-   xhost +
+   xhost +local:docker
    nohup webots &
    ```
 
