@@ -11,4 +11,10 @@ RUN apt upgrade -y --no-install-recommends & apt install -y --no-install-recomme
 
 RUN wget https://github.com/cyberbotics/webots/releases/download/R2023b/webots_2023b_amd64.deb -O ./webots.deb && apt install ./webots.deb -y --no-install-recommends && rm webots.deb
 
-RUN bash -c "cd && git clone https://github.com/Glasgow-Gang/Webots-Controller && git clone https://github.com/Glasgow-Gang/Webots-World"
+RUN bash -c "cd && git clone -b 4.10.0 --depth=1 https://github.com/opencv/opencv.git && cd opencv && mkdir build && cd build && cmake .. && make -j4 && make install && cd && rm -rf opencv"
+
+COPY init.sh /init.sh
+
+RUN chmod +x /init.sh
+
+ENTRYPOINT ["/init.sh"]
