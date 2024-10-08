@@ -11,3 +11,5 @@ if [ ! -d "$HOME/Webots-World" ]; then
     echo "Cloning Webots-World..."
     cd "$HOME" && git clone https://github.com/Glasgow-Gang/Webots-World
 fi
+
+exec /bin/bash
