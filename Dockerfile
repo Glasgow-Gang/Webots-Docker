@@ -7,7 +7,7 @@ LABEL description="This is a Docker Image for Webots."
 
 RUN apt update
 
-RUN apt upgrade -y --no-install-recommends & apt install -y --no-install-recommends git curl sudo wget zip unzip make && apt install -y net-tools w3m usbutils nano gdb cmake ninja-build gcc g++ python3-pip && apt clean
+RUN apt upgrade -y --no-install-recommends & apt install -y --no-install-recommends git curl sudo wget zip unzip make && apt install -y net-tools w3m usbutils nano gdb cmake ninja-build gcc g++ python3-pip libspdlog-dev && apt clean
 
 RUN wget https://github.com/cyberbotics/webots/releases/download/R2023b/webots_2023b_amd64.deb -O ./webots.deb && apt install ./webots.deb -y --no-install-recommends && rm webots.deb
 
